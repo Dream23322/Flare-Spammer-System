@@ -1,5 +1,4 @@
-<div align="center">
-  <b>Flare Spam System!</b>
+<b>Flare Spam System!</b>
 
 Things it works on (u can probs use it on other stuff)
 
