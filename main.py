@@ -7,7 +7,9 @@ import modes.BypassesForDiscord
 import socket
 import tkinter as t
 import modes.BypassesForMC
+
 import customtkinter as tk
+Message = "Flare Spammer System On Top! [www.github.com/Dream23322/Flare-Spammer-System]"
 def bypass42():
     print("DO NOT USE THIS FOR CYBER BULLYING!!!!!!!!!!!!!!!!!!!!")
     time.sleep(1)
@@ -409,17 +411,12 @@ elif question == 'Minecraft':
             modes.BypassesForMC.OwnagePE()
         elif ans == 'clickgui':
             #I need Help With GUI's
-            print("\nWhat Do You Want Your Message To Be? :)")
-            Message = input(">>")
+
             tk.set_default_color_theme('green')
             window = tk.CTk()
             window.title("Click\n GUI")
             window.geometry("450x890")
-            def getInfo():
-                Message = entry1.get()
-                text = entry1.get()
-                print(text)
-                print(Message)
+
 
             frame_3 = tk.CTkFrame(master=window)
             frame_3.pack(pady=25, padx=40, fill='both', expand=True)
@@ -428,8 +425,15 @@ elif question == 'Minecraft':
             entry1 = tk.CTkEntry(master=frame_3)
             entry1.pack(pady=25, padx=40, fill="both", expand=True)
 
+            def getInfo():
+                Message = entry1.get()
+                text = entry1.get()
+                print(text)
+                print(Message)
+
             confirm = tk.CTkButton(master=frame_3, text='Confirm Message', command=getInfo)
             confirm.pack(pady=25, padx=40, fill="both", expand=True)
+
 
 
 
