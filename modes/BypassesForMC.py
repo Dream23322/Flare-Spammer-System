@@ -153,7 +153,19 @@ def FlareonBeta():
         s.close((ip, port))
 
 
-
+def OwnagePE():
+    print("What Do You Want Your Message To Be?")
+    Message = input(">>")
+    time.sleep(1)
+    print("Please Go Into Chat :)")
+    while True:
+        bypass = random.choice(bypasses)
+        keyboard.write(Message)
+        keyboard.write(' - \n - \n')
+        keyboard.write(bypass)
+        pyautogui.press("ENTER")
+        time.sleep(2.8)
+        
 
 
 
