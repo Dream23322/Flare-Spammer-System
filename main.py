@@ -238,6 +238,9 @@ def FlareonBeta2():
         time.sleep(1)
         s.close((ip, port))
 
+
+
+
 def ldmode():
 
 
@@ -246,11 +249,14 @@ def ldmode():
     ldmodegui.geometry("300x400")
 
     darkmode = tk.CTkButton(master=ldmodegui, text='Dark Mode', command=darkMode)
-    darkmode.pack(pady=25, padx=40, fill="both", expand=True)
+    darkmode.pack(pady=25, padx=40, fill="both", expand=False)
+
+    blue = tk.CTkButton(master=ldmodegui, text='Blue Accent', command=BlueAccent)
+    #blue.pack(pady=25, padx=40, fill="both", expand=False)
 
 
     notdarkmode = tk.CTkButton(master=ldmodegui, text='Light Mode', command=NotdarkMode)
-    notdarkmode.pack(pady=25, padx=40, fill="both", expand=True)
+    notdarkmode.pack(pady=25, padx=40, fill="both", expand=False)
 
     #accent_green = tk.CTkButton(master=ldmodegui, text='Green', command=green_mode)
     #accent_green.pack(pady=25, padx=40, fill="both", expand=True)
@@ -260,8 +266,9 @@ def ldmode():
 def darkMode():
     tk.set_appearance_mode("dark")
 def NotdarkMode():
-
     tk.set_appearance_mode("light")
+def BlueAccent():
+    tk.set_default_color_theme('blue')
 
 print("What platform are you going to be using this on?")
 print(
@@ -301,14 +308,15 @@ if question == 'Discord':
             modes.BypassesForDiscord.bypass4()
         elif ans == 'No Bypass':
             modes.BypassesForDiscord.nobypass()
+
         elif ans == 'clickgui':
             #setting everything up
 
             print("\nWhat Do You Want Your Message To Be?")
-            Message = input(">>")
+            
             window = tk.CTk()
             window.title('ClickGUI') 
-            tk.set_default_color_theme("green")
+            tk.set_default_color_theme("blue")
             window.geometry("400x650")
 
             frame_1 = tk.CTkFrame(master=window)
@@ -397,14 +405,33 @@ elif question == 'Minecraft':
             modes.BypassesForMC.PayForYourGames()
         elif ans == 'FlareonBypass123':
             modes.BypassesForMC.FlareonBeta()
+        elif ans == 'ownage':
+            modes.BypassesForMC.OwnagePE()
         elif ans == 'clickgui':
-            
+            #I need Help With GUI's
             print("\nWhat Do You Want Your Message To Be? :)")
             Message = input(">>")
-            
+            tk.set_default_color_theme('green')
             window = tk.CTk()
             window.title("Click\n GUI")
             window.geometry("450x890")
+            def getInfo():
+                Message = entry1.get()
+                text = entry1.get()
+                print(text)
+                print(Message)
+
+            frame_3 = tk.CTkFrame(master=window)
+            frame_3.pack(pady=25, padx=40, fill='both', expand=True)
+
+
+            entry1 = tk.CTkEntry(master=frame_3)
+            entry1.pack(pady=25, padx=40, fill="both", expand=True)
+
+            confirm = tk.CTkButton(master=frame_3, text='Confirm Message', command=getInfo)
+            confirm.pack(pady=25, padx=40, fill="both", expand=True)
+
+
 
             frame_1 = tk.CTkFrame(master=window)
             frame_1.pack(pady=25, padx=40, fill="both", expand=True)
